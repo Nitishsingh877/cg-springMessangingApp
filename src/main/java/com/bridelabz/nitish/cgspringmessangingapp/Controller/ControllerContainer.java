@@ -79,5 +79,21 @@ public class ControllerContainer {
         return new ArrayList<>(entry.values());
     }
 
+    //Make REST Call to show Hello Mark
+    //Taylor from BridgeLabz
+    //- Use PUT Request Method and pass first name as
+    //Path Variable and last name as Query Parameter
+    //- Use CURL to demonstrate the REST API Call
+    //- curl -X PUT
+    //localhost:8080/hello/put/Mark/?lastName=Taylor
+    //-w "\n"
+
+    @PutMapping("/hello/put/{firstName}")
+    public String putName(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName +"  "+ lastName +" from BridgeLabz ";
+    }
+
+
+
 
 }
