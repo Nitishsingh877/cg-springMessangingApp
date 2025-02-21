@@ -29,5 +29,18 @@ public class ControllerContainer {
         return "Hello " + name + " from BridgeLabz";
     }
 
+    //Make REST Call to show Hello
+    //Mark from BridgeLabz
+    //- Use GET Request Method and pass name as
+    //path variable
+    //- Use CURL to demonstrate the REST API Call
+    //- curl localhost:8080/hello/param/Mark -w
+    //"\n"
+
+    @GetMapping("/hello/param/{myName}")
+    public String returnName(@PathVariable String myName) {
+        return "name in end of link is : " + myName;
+    }
+
 
 }
