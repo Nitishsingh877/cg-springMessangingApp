@@ -69,9 +69,9 @@ public class ControllerContainer {
     Map<Long,Person> entry = new HashMap<>();
 
     @PostMapping("/hello/post")
-    public Boolean postName(@RequestBody Person person) {
+    public String postName(@RequestBody Person person) {
         entry.put(person.getId(), person);
-        return true;
+        return "first name is " + person.getFirstName()  + " and last name is " + person.getLastName();
     }
 
     @GetMapping("hello/get")
