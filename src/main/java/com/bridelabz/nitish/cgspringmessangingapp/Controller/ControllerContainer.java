@@ -39,7 +39,7 @@ public class ControllerContainer {
 
     @GetMapping("/hello/param/{myName}")
     public String returnName(@PathVariable String myName) {
-        return "name in end of link is : " + myName;
+        return "name present in end of link is : " + myName;
     }
 
 
